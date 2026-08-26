@@ -1,9 +1,3 @@
-### Small repo description
-
-**An 8×8 INT4 weight-stationary systolic-array NPU core implemented in SystemVerilog and hardened to GDSII on the SkyWater 130nm PDK, with cocotb RTL and gate-level verification.** 
-
-### README — your format
-
 ````markdown
 # 🧠 Edge-AI NPU Core: 8×8 INT4 Systolic Array
 
