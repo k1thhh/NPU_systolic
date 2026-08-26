@@ -1,0 +1,21 @@
+# OS / editor
+.DS_Store
+.idea
+.vscode
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Simulation artifacts
+*.vcd
+test/sim_build/
+test/results.xml
+test/gate_level_netlist.v
+
+# Tiny Tapeout / OpenLane build output
+runs/
+tt_submission/
+src/user_config.json
+src/config_merged.json

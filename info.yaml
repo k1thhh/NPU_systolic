@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "Edge-AI NPU Core (8x8 Systolic Array)"
+  author:       "R Naga Arjun"
+  discord:      ""      # Leave blank if you don't use Discord
+  description:  "8x8 INT4 weight-stationary systolic array for edge AI matrix multiplication."
+  language:     "SystemVerilog"
+  clock_hz:     50000000       # 50 MHz target frequency
+
+  tiles: "8x2"
+
+  # MUST match your GitHub username and Verilog module name exactly
+  top_module:  "tt_um_npu_core"
+
+  source_files:
+    - "input_buffer.sv"
+    - "processing_element.sv"
+    - "systolic_array_8x8.sv"
+    - "tt_um_npu_core.sv"
+
+# The pinout of your project.
+pinout:
+  # 8-bit Data Input Bus (streaming weights and activations)
+  ui[0]: "data_in[0]"
+  ui[1]: "data_in[1]"
+  ui[2]: "data_in[2]"
+  ui[3]: "data_in[3]"
+  ui[4]: "data_in[4]"
+  ui[5]: "data_in[5]"
+  ui[6]: "data_in[6]"
+  ui[7]: "data_in[7]"
+
+  # 8-bit Data Output Bus (multiplexed accumulator results, one byte at a time)
+  uo[0]: "result_out[0]"
+  uo[1]: "result_out[1]"
+  uo[2]: "result_out[2]"
+  uo[3]: "result_out[3]"
+  uo[4]: "result_out[4]"
+  uo[5]: "result_out[5]"
+  uo[6]: "result_out[6]"
+  uo[7]: "result_out[7]"
+
+  # Control signals (weight load, buffer chip-select, column/byte select)
+  uio[0]: "weight_load_en (1 = load weights, 0 = stream activations)"
+  uio[1]: "buffer_cs (1 = enable input staging buffer)"
+  uio[2]: "col_sel[0] (accumulator column select)"
+  uio[3]: "col_sel[1]"
+  uio[4]: "col_sel[2]"
+  uio[5]: "byte_sel (0 = low byte, 1 = high byte of the 16-bit result)"
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
