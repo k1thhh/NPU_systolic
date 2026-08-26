@@ -1,4 +1,3 @@
-````markdown
 # 🧠 Edge-AI NPU Core: 8×8 INT4 Systolic Array
 
 A small, tapeout-ready hardware AI accelerator implementing an **8×8 weight-stationary systolic array** for INT4 matrix multiplication, written in **SystemVerilog** and hardened to **GDSII on the SkyWater 130nm PDK** as a Tiny Tapeout project.
@@ -90,7 +89,6 @@ The design focuses on:
                           │
                           ▼
                        uo_out
-````
 
 **Flow:** input bytes → input staging buffer → INT4 activation stream → 8×8 Processing Element array → accumulated partial sums → output multiplexer → Tiny Tapeout output pins.
 
