@@ -2,7 +2,7 @@
 
 A small, tapeout-ready hardware AI accelerator implementing an **8×8 weight-stationary systolic array** for INT4 matrix multiplication, written in **SystemVerilog** and hardened to **GDSII on the SkyWater 130nm PDK** as a Tiny Tapeout project.
 
-The accelerator uses **64 custom Processing Elements (PEs)** arranged in an 8×8 grid, with INT4 weights and activations and INT16 accumulators. Data is streamed through the systolic array to perform matrix multiplication efficiently while minimizing repeated memory access. :contentReference[oaicite:1]{index=1}
+The accelerator uses **64 custom Processing Elements (PEs)** arranged in an 8×8 grid, with INT4 weights and activations and INT16 accumulators. Data is streamed through the systolic array to perform matrix multiplication efficiently while minimizing repeated memory access.
 
 <p align="center">
 
